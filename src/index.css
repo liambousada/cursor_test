@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* react-calendar overrides for soft minimalist look */
+.react-calendar {
+  @apply w-full border-0 bg-transparent font-sans;
+}
+.react-calendar__tile {
+  @apply rounded-lg py-2 text-sm transition-colors duration-200;
+}
+.react-calendar__tile--active {
+  @apply bg-soft-mist text-gray-800 font-medium;
+}
+.react-calendar__tile--now {
+  @apply bg-soft-sage text-gray-800;
+}
+.react-calendar__month-view__days__day--weekend {
+  @apply text-gray-500;
+}
+.react-calendar__navigation button {
+  @apply text-lg font-medium text-gray-700 hover:text-gray-900 transition-colors;
+}
+.react-calendar__month-view__weekdays {
+  @apply text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-soft-stone rounded-full;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-soft-sand rounded-full hover:bg-gray-300 transition-colors;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 8px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
